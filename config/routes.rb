@@ -8,6 +8,10 @@ Rails.application.routes.draw do
   match '/video5', to: 'static_pages#video5', via: 'get'
   match '/map', to: 'static_pages#map', via: 'get'
 
+  resources :sessions, only: [:new, :create, :destroy]
+  match '/signin',  to: 'sessions#new',         via: 'get'
+  match '/signout', to: 'sessions#destroy',     via: 'delete'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
