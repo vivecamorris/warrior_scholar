@@ -1,3 +1,71 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+	background-color: #808080;
+	margin: 0 auto;
+	width: 1024px;
+	font-family: 'Roboto', sans-serif;
+	color: #fff;
+}
+
+#starlogo {
+	position: fixed;
+}
+
+#home-background {
+  position: fixed; 
+  top: -50%; 
+  left: -50%; 
+  width: 200%; 
+  height: 200%;
+  z-index: -5;
+}
+
+#home-background img {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  margin: auto; 
+  min-width: 50%;
+  min-height: 50%;
+}
+
+h1 {
+	font-size: 60px;
+}
+
+p {
+	padding: 20px;
+}
+
+.home-page-style-button {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	text-align: center;
+	width: 250px;
+	color: #fff;
+	background-image: linear-gradient(to bottom,#a8ba6d,#a3b355);
+	background-color: #a6b763;
+	border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+	padding: 5px;
+	border-radius: 30px;
+	display: block;
+	font-size: 25px;
+	border: 2px;
+	line-height: 50px;
+}
+
+a {
+	text-decoration: none;
+}
+
+.container {
+	margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
