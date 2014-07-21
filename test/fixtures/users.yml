@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  access_code: MyString
+  fname: MyString
+  lname: MyString
+  zipcode: 1
+  map_comment: MyText
+
+two:
+  access_code: MyString
+  fname: MyString
+  lname: MyString
+  zipcode: 1
+  map_comment: MyText
