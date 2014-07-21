@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
-  get 'static_pages/home'
-  get 'static_pages/help'
-  get 'static_pages/video1'
-  get 'static_pages/video2'
-  get 'static_pages/video3'
-  get 'static_pages/video4'
-  get 'static_pages/video5'
-  get 'static_pages/map'
+  root 'static_pages#home'
+  match '/help', to: 'static_pages#help', via: 'get'
+  match '/video1', to: 'static_pages#video1', via: 'get'
+  match '/video2', to: 'static_pages#video2', via: 'get'
+  match '/video3', to: 'static_pages#video3', via: 'get'
+  match '/video4', to: 'static_pages#video4', via: 'get'
+  match '/video5', to: 'static_pages#video5', via: 'get'
+  match '/map', to: 'static_pages#map', via: 'get'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
