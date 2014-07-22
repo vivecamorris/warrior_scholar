@@ -1,4 +1,8 @@
-<div class="header">
-<%= link_to image_tag("logogrey.png", alt: "The Warrior-Scholar Project", id: "logogrey"), 'http://www.warrior-scholar.org' %>
-<%= image_tag("progressbar1.png", id: "progressbar") %>
-</div>
+ <% provide(:pbarimg, 'progressbar1.png') %>
+ <% provide(:videolink, '//player.vimeo.com/video/39461899') %>
+ <% provide(:previouspage, '/') %>
+ <% provide(:vidnum, '1') %>
+ <% provide(:ttl, 'Introduction') %>
+ <% provide(:subttl, 'You Served... So What?') %>
+ <% provide(:nextpage, 'video2') %>
+ <%= render 'layouts/video' %>
