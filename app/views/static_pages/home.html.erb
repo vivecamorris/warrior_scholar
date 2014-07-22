@@ -6,6 +6,7 @@
 <div class = "container">
 <h1>Your next mission:</br>
 College. </h1>
+
 	
 	<% if !signed_in? %>
 
@@ -24,6 +25,9 @@ College. </h1>
 											    
 											    <form class="pure-form" accept-charset="UTF-8" action="/sessions" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="WD8LGIVV+v/bm4uY5aejzeprg5Tsqy/vnQ67Jmpjz50=" /></div>
 
+											    	<% flash.each do |key, value| %>
+        <div class="alert"><%= raw value %></div>
+      <% end %>
 											     	 <input placeholder="Enter your access code" id="session_access_code" name="session[access_code]" type="text" />
 
 											      	<input class="pure-button pure-button-primary" name="commit" type="submit" value="Get started"/>
