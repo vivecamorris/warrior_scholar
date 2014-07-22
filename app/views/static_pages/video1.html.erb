@@ -1,30 +1,8 @@
-<div class="header">
-</div>
-<div class="containerformargin">
-	<%= link_to image_tag("logogrey.png", alt: "The Warrior-Scholar Project", id: "logogrey"), 'http://www.warrior-scholar.org' %> <div id="title">Warrior Scholar Project</div>
-	<%= image_tag("progressbar3.png", id: "progressbar") %>
-	
-	<div class="videocontainer">
-	
-	<iframe id="video" src="//player.vimeo.com/video/39461899"  webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-	</div>
-
-
-</div>
-<div class="topfooter">
-	<%=link_to root_path do %>
-		<div id="left-btn" class="nav-btn"></div>
-	<%end%>
-
-	<div class="vid-ttl">
-		<div id="vid-btn">1 of 5</div>
-		<span class="text-ttl">
-		<span id="ttl">Introduction</span>
-		<div id="subttl">You Served... So What?</div>
-		</span>
-	</div>
-
-	<%=link_to 'video2' do %>
-		<div id="right-btn" class="nav-btn" ></div>
-	<%end%>
-</div>
+ <% provide(:pbarimg, 'progressbar1.png') %>
+ <% provide(:videolink, '//player.vimeo.com/video/39461899') %>
+ <% provide(:previouspage, '/') %>
+ <% provide(:vidnum, '1') %>
+ <% provide(:ttl, 'Introduction') %>
+ <% provide(:subttl, 'You Served... So What?') %>
+ <% provide(:nextpage, 'video2') %>
+ <%= render 'layouts/video' %>
