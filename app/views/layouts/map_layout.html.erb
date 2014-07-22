@@ -39,39 +39,30 @@
         var contentString = '<div id="content">'+
               '<div id="siteNotice">'+
               '</div>'+
-              '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
+              '<h1 id="firstHeading" class="firstHeading">Rob Henderson</h1>'+
               '<div id="bodyContent">'+
-              '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
-              'sandstone rock formation in the southern part of the '+
-              'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
-              'south west of the nearest large town, Alice Springs; 450&#160;km '+
-              '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
-              'features of the Uluru - Kata Tjuta National Park. Uluru is '+
-              'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
-              'Aboriginal people of the area. It has many springs, waterholes, '+
-              'rock caves and ancient paintings. Uluru is listed as a World '+
-              'Heritage Site.</p>'+
-              '<p>Attribution: Uluru, <a href="http://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
-              'http://en.wikipedia.org/w/index.php?title=Uluru</a> '+
-              '(last visited June 22, 2009).</p>'+
+              '<p><b>Rob Henderson</b>, one of the 2014 Yale Warrior Scholars, is a <b>seven year veteran of the Air Force</b> based at Ramstein Air Base in Germany. Before becoming a Warrior-Scholar, he had resigned himself to taking classes online from public colleges:' +
+              '</br></br><em>[The Warrior-Scholar Project] raised my expectation for myself. It made me think, &lsquo;Maybe I can go to a school like this.&rsquo; </em></p>'+
               '</div>'+
               '</div>';
 
       var infowindow = new google.maps.InfoWindow({
-      content: contentString,
-      maxWidth: 200
+      content: contentString
       });
 
       // To add the marker to the map, use the 'map' property
       var marker = new google.maps.Marker({
       position: myLatlng,
       map: map,
+      animation: google.maps.Animation.DROP,
       title:"Hello World!"
       });
+
       google.maps.event.addListener(marker, 'click', function() {
       infowindow.open(map,marker);
       });
-      }
+
+    }
 
       initialize();
     </script>
