@@ -21,6 +21,7 @@ class StaticPagesController < ApplicationController
   end
 
   def map
+    render :layout => "map_layout"
   end
 
 end
