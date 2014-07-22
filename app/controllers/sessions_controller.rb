@@ -10,6 +10,7 @@ class SessionsController < ApplicationController
   		user.update_column(:used, true)
   		render 'static_pages/video1'
   	 else
+       @showFirst = false;
   		 render 'static_pages/home'
   end
 

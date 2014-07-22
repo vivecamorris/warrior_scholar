@@ -1,9 +1,11 @@
 class StaticPagesController < ApplicationController
     before_action :signed_in_user, only: [:video1, :video2, :video3,
      :video4, :video5, :map]
+    before_action :setShowFirst
 
 
   def home
+      @showFirst ||= true
   end
 
   def help
@@ -39,7 +41,12 @@ class StaticPagesController < ApplicationController
         end
 
 
+
   end
+    
+    def setShowFirst
+      @showFirst ||= true
+    end
 
 
 end

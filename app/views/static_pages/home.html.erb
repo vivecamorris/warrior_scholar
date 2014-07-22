@@ -9,9 +9,15 @@ College. </h1>
 	
 	<% if !signed_in? %>
 
+	<% if @showFirst %>
+
 								<div class = "sign-in first">
 								<button type="button" class="home-page-style-button">Get to work.</button>
 								</div>
+	<% end %>
+	
+
+
 
 								<div class = "sign-in hidden">
 										
@@ -23,6 +29,8 @@ College. </h1>
 											      	<input class="pure-button pure-button-primary" name="commit" type="submit" value="Get started"/>
 												</form>
 								</div>
+
+								
 	<% else %>
 
 								<div>
@@ -45,6 +53,15 @@ College. </h1>
 
 		press++;
 	});
+
+	var showFirst = <%=@showFirst%>;
+	if (!showFirst) {
+
+		$( ".hidden" ).toggle();
+
+	}
+
+
 	</script>
 
 
