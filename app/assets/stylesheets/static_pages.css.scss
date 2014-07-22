@@ -142,17 +142,29 @@ a {
 .vid-ttl {
 	position: relative;
 	margin-left: 20%;
-	color: white;
-	font-weight:bold;
 }
 
 #vid-btn {
-	background: #dddddd;
-	width: 100px;
+	background: #C0C0C0;
+	width: 200px;
 	height: 60px;
 	line-height: 60px;
-	border-radius: 15px;
+	border-radius: 10px;
 	text-align: center;
+	color: white;
+	font-weight:bold;
+	margin-top: 12px;
+	display: inline-block;
 }
 
+.text-ttl {
+	position: absolute;
+	margin-left: 10px;
+	color: #333333;
+	margin-top: 17px;
 
+}
+
+#subttl {
+	font-size: 20px;
+}
