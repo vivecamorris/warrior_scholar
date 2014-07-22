@@ -6,6 +6,47 @@
 <div class = "container">
 <h1>Your next mission:</br>
 College. </h1>
-<%= link_to "Get to work.", '/video1', class: "home-page-style-button" %>
-<p> The Warrior Scholars Project Horizon helps extraordinary </br> veterans become leaders in the classroom.</p>
+	
+	<% if !signed_in? %>
+
+								<div class = "sign-in first">
+								<button type="button" class="home-page-style-button">Get to work.</button>
+								</div>
+
+								<div class = "sign-in hidden">
+										
+											    
+											    <form class="pure-form" accept-charset="UTF-8" action="/sessions" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="WD8LGIVV+v/bm4uY5aejzeprg5Tsqy/vnQ67Jmpjz50=" /></div>
+
+											     	 <input placeholder="Enter your access code" id="session_access_code" name="session[access_code]" type="text" />
+
+											      	<input class="pure-button pure-button-primary" name="commit" type="submit" value="Get started"/>
+												</form>
+								</div>
+	<% else %>
+
+								<div>
+							<%= link_to "Continue on.", '/video1', class: "home-page-style-button" %>
+								</div>
+	<%end%>
+
+
+
+
+
+	<script type="text/javascript">
+	var press = 0;
+	$( ".first" ).click(function() {
+		if (press == 0) {
+
+		$( ".sign-in" ).toggle();
+		
+		}
+
+		press++;
+	});
+	</script>
+
+
+<p> The Warrior Scholars Project Horizon helps extraordinary <br> veterans become leaders in the classroom.</p>
 </div>
