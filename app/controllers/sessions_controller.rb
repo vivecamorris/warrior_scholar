@@ -9,8 +9,9 @@ class SessionsController < ApplicationController
   		sign_in user
   		user.update_column(:used, true)
   		render 'static_pages/video1'
-  	else
-  		render 'new'
+  	 else
+       @showFirst = false;
+  		 render 'static_pages/home'
   end
 
   end
