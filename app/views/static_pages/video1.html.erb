@@ -1,11 +1,28 @@
 <div class="header">
 </div>
 <div class="containerformargin">
-<%= link_to image_tag("logogrey.png", alt: "The Warrior-Scholar Project", id: "logogrey"), 'http://www.warrior-scholar.org' %> <div id="title">Warrior Scholar Project</div>
-<%= image_tag("progressbar3.png", id: "progressbar") %>
-<div class="videocontainer">
-<iframe id="video" src="//player.vimeo.com/video/39461899"  webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	<%= link_to image_tag("logogrey.png", alt: "The Warrior-Scholar Project", id: "logogrey"), 'http://www.warrior-scholar.org' %> <div id="title">Warrior Scholar Project</div>
+	<%= image_tag("progressbar3.png", id: "progressbar") %>
+	
+	<div class="videocontainer">
+	
+	<iframe id="video" src="//player.vimeo.com/video/39461899"  webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	</div>
+
+
 </div>
+<div class="topfooter">
+	<%=link_to root_path do %>
+		<div id="left-btn" class="nav-btn"></div>
+	<%end%>
+
+	<div class="vid-ttl">
+		<div id="vid-btn">1 of 5</div>
+	</div>
+
+	<%=link_to 'video2' do %>
+		<div id="right-btn" class="nav-btn" ></div>
+	<%end%>
 </div>
 
 <div class="footer">
