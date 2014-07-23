@@ -1,11 +1,11 @@
 <div id = "home-background">
 	<%= image_tag( "background.png", :alt => "background of soldier holding books" ) %>
-
 </div>
+
 <%= link_to image_tag("starlogo.png", alt: "The Warrior-Scholar Project", id: "logo"), 'http://www.warrior-scholar.org'  %>
 
 <div class = "container">
-<h1>Your next mission:</br>
+<h1>Your next mission:<br>
 College. </h1>
 	
 	<% if !signed_in? %>
@@ -55,12 +55,12 @@ College. </h1>
 		press++;
 	});
 
-	// var showFirst = <%=@showFirst%>;
-	// if (!showFirst) {
+	var showFirst = <%=@showFirst%>;
+	if (!showFirst) {
 
-	// 	$( ".hidden" ).toggle();
+		$( ".hidden" ).toggle();
 
-	// }
+	}
 
 
 	</script>

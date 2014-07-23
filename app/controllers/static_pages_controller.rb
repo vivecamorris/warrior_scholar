@@ -5,7 +5,7 @@ class StaticPagesController < ApplicationController
 
 
   def home
-      @showFirst ||= true
+      # @showFirst ||= true
   end
 
   def help
@@ -37,6 +37,7 @@ class StaticPagesController < ApplicationController
     def signed_in_user
       unless signed_in?
             #store_location
+          @showFirst = false;
           render "static_pages/home", notice: "Please sign in." unless signed_in?
         end
 
