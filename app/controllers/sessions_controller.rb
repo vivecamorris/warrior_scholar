@@ -11,6 +11,7 @@ class SessionsController < ApplicationController
   		render 'static_pages/video1'
   	 else
        @showFirst = false;
+       flash[:error] = 'Invalid Access Code. Click <a href="#">here</a> to apply.'
   		 render 'static_pages/home'
   end
 

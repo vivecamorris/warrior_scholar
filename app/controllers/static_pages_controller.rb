@@ -1,6 +1,6 @@
 class StaticPagesController < ApplicationController
     before_action :signed_in_user, only: [:video1, :video2, :video3,
-     :video4, :video5, :map]
+     :video4, :video5]
     before_action :setShowFirst
 
 
@@ -27,6 +27,7 @@ class StaticPagesController < ApplicationController
   end
 
   def map
+    render :layout => "map_layout"
   end
 
 
