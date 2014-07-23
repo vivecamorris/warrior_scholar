@@ -108,7 +108,6 @@ a {
 
 /*VIDEO PAGES*/
 
-
 .header {
 	height: 60px;
 	width: 100%;
@@ -164,6 +163,9 @@ a {
 	height: 100%;
 	width: 15%;
 	background-color: #C0C0C0;
+	text-align: center;
+	font-size: 3em;
+	padding-top: 1vw;
 }
 
 #left-btn {
@@ -214,4 +216,10 @@ a {
 #map_canvas {
     width: 100%;
     height: 100%;
+}
+
+@media all and (max-width: 40em) {
+	.nav-btn {
+		padding-top: 2vw;
+	}
 }
