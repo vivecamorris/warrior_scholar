@@ -17,6 +17,13 @@ body {
 	margin-bottom:20px;
 }
 
+input{
+	margin: 0 auto;
+}
+
+.get-started-button{
+	margin-top: 6px;
+}
 
 /*home page*/
 #home-background {
@@ -40,7 +47,13 @@ body {
 }
 
 h1 {
-	font-size: 60px;
+font-size: 3em;
+margin: .67em 0;
+margin-top: 0.67em;
+margin-right: 0px;
+margin-bottom: 0.67em;
+margin-left: 0px;
+
 }
 
 p {

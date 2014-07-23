@@ -1,8 +1,8 @@
 <div id = "home-background">
-	<%= image_tag( "background.png", :alt => "background of soldier holding books" ) %>
+	<%= image_tag( "background.png", :alt => "background of soldier holding books", :class => "pure-img") %>
 </div>
 
-<%= link_to image_tag("starlogo.png", alt: "The Warrior-Scholar Project", id: "logo"), 'http://www.warrior-scholar.org'  %>
+<%= link_to image_tag("starlogo.png", alt: "The Warrior-Scholar Project", id: "logo", :class => "pure-img"), 'http://www.warrior-scholar.org'  %>
 
 <div class = "container">
 <h1>Your next mission:<br>
@@ -29,9 +29,11 @@ College. </h1>
 											    	<% flash.each do |key, value| %>
         <div class="alert"><%= raw value %></div>
       <% end %>
+
 											     	 <input placeholder="Enter your access code" id="session_access_code" name="session[access_code]" type="text" />
 
-											      	<input class="pure-button pure-button-primary" name="commit" type="submit" value="Get started"/>
+											      	<input class="get-started-button pure-button pure-button-primary" name="commit" type="submit" value="Get started"/>
+
 												</form>
 								</div>
 
