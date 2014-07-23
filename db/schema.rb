@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140721204640) do
+ActiveRecord::Schema.define(version: 20140723175104) do
 
   create_table "users", force: true do |t|
     t.string   "access_code"
@@ -23,6 +23,9 @@ ActiveRecord::Schema.define(version: 20140721204640) do
     t.datetime "updated_at"
     t.boolean  "used",           default: false
     t.string   "remember_token"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.string   "ip_address"
   end
 
   add_index "users", ["remember_token"], name: "index_users_on_remember_token"

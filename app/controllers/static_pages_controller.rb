@@ -27,18 +27,29 @@ class StaticPagesController < ApplicationController
   end
 
   def map
-
-
+    # user = User.first
+    # request.remote_ip
+    # user.ip_address = request.remote_ip
+    # user.save
+    #the following creates new users
     content = []
+    location = []
     User.all.each do |user|
       cont = ['<div class="info_content">' +
-        '<h3>' + user.fname + " " + user.lname +
+        '<h3>' + user.fname + " " + user.lname + '</h3>' +
         '<p>' + user.map_comment + '</p>' +
         '</div>']
+      loc = ['', user.latitude.floor, user.longitude.floor, user.id]
 
+      location.push(loc,)
       content.push(cont,)
     end
+
     @content = content
+    @location = location
+ 
+
+
     render :layout => "map_layout"
 
 
