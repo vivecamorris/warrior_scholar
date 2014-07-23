@@ -1,7 +1,8 @@
+ <% provide(:bodyclass, 'video') %>
 <div class="header">
 </div>
 <div class="containerformargin">
-	<%= link_to image_tag("logogrey.png", alt: "The Warrior-Scholar Project", id: "logogrey"), '/' %> <div id="title">Warrior Scholar Project</div>
+	<%= link_to image_tag("logogrey.png", alt: "The Warrior-Scholar Project", id: "logogrey"), '/' %> <a href="/"> <div id="title">Warrior Scholar Project</div></a>
 	<%= image_tag("#{yield(:pbarimg)}", id: "progressbar") %>
 	
 	<div class="videocontainer">

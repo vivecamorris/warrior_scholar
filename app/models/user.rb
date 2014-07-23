@@ -1,5 +1,9 @@
 class User < ActiveRecord::Base
   before_create :create_remember_token
+  
+  geocoded_by :ip_address
+  after_validation :geocode
+
 
   def User.new_remember_token
     SecureRandom.urlsafe_base64
@@ -8,6 +12,8 @@ class User < ActiveRecord::Base
   def User.digest(token)
     Digest::SHA1.hexdigest(token.to_s)
   end
+
+
 
 private
 
