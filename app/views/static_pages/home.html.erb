@@ -1,6 +1,5 @@
-<div id = "home-background">
-	<%= image_tag( "background.png", :alt => "background of soldier holding books", :class => "pure-img") %>
-</div>
+<% provide(:bodyclass, 'home') %>
+
 
 <%= link_to image_tag("starlogo.png", alt: "The Warrior-Scholar Project", id: "logo"), 'http://www.warrior-scholar.org', :class => "pure-img" %>
 
@@ -14,7 +13,7 @@ College. </h1>
 	<% if @showFirst %>
 
 								<div class = "sign-in first">
-								<button type="button" class="button-xlarge pure-button pure-button-primary">Get to work.</button>
+								<button type="button" class="home-page-style-button">Get to work.</button>
 								</div>
 	<% end %>
 	
@@ -41,7 +40,7 @@ College. </h1>
 	<% else %>
 
 								<div>
-							<%= link_to "Continue on.", '/video1', class: "button-xlarge pure-button pure-button-primary" %>
+							<%= link_to "Continue on.", '/video1', class: "home-page-style-button" %>
 								</div>
 	<%end%>
 
@@ -74,3 +73,4 @@ College. </h1>
 
 <p> The Warrior Scholars Project Horizon helps extraordinary <br> veterans become leaders in the classroom.</p>
 </div>
+

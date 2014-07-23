@@ -2,12 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+
 body {
 	background-color: #424242;
 	margin: 0 auto;
 	font-family: 'Roboto', sans-serif;
 	color: #fff;
 }
+
+
 
 .hidden {
 	display: none;
@@ -16,10 +20,6 @@ body {
 .alert {
 	margin-bottom:20px;
 }
-
-.button-xlarge {
-    font-size: 150%;
- }
 
 input{
 	margin: 0 auto;
@@ -35,6 +35,15 @@ input{
 }
 
 /*home page*/
+
+body.home {
+background-image: url("background.png");
+background-size: cover;
+}
+
+
+
+
 #home-background {
   position: fixed; 
   top: -50%; 
@@ -56,7 +65,7 @@ input{
 }
 
 h1 {
-font-size: 3.0em;
+font-size: 2.5em;
 margin: .67em 0;
 margin-top: 0.67em;
 margin-right: 0px;
@@ -119,7 +128,7 @@ a {
 
 .containerformargin {
 	margin-left: 15%;
- 	margin-right: 15%;	
+ 	margin-right: 15%;		
 }
 
 #title {
@@ -143,10 +152,10 @@ a {
 
 #video {
 	width:  100%;
-	height: 700px;
+	height: 500px;
 	border: 0px;
 	display: block;
- 	margin-top: 50px;
+ 	margin-top: 30px;
 }
 
 /*footer*/
