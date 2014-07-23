@@ -4,6 +4,7 @@ ruby '1.9.3'
 
 gem 'rails', '4.1.1'
 gem 'tzinfo-data'
+gem 'sprockets', '2.12.1'
 
 group :development do
   gem 'sqlite3', '1.3.8'
