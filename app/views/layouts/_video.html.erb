@@ -14,7 +14,7 @@
 </div>
 <div class="topfooter">
 	<%=link_to "#{yield(:previouspage)}" do %>
-		<div id="left-btn" class="nav-btn"></div>
+		<div id="left-btn" class="nav-btn">&lt;</div>
 	<%end%>
 
 	<div class="vid-ttl">
@@ -26,6 +26,6 @@
 	</div>
 
 	<%=link_to "#{yield(:nextpage)}" do %>
-		<div id="right-btn" class="nav-btn" ></div>
+		<div id="right-btn" class="nav-btn">&gt;</div>
 	<%end%>
 </div>
