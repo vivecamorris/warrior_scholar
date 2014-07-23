@@ -48,7 +48,7 @@ class StaticPagesController < ApplicationController
     @content = content
     @location = location
  
-
+    @user = User.find(params[:id])
 
     render :layout => "map_layout"
 

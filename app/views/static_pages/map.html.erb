@@ -1,4 +1,4 @@
- <% provide(:bodyclass, 'video') %>
+ <% provide(:bodyclass, 'map') %>
  <% provide(:pbarimg, 'progressbar5.png') %>
 <body class = "map">
 <div class="header" id="mapheader">
@@ -12,7 +12,12 @@
 </div>
 <div class="ttlcontainer">Join the Thousands of Veterans Committed to<br>Preparing our Troops for College</div>
 
-<div class="">
+<div class="subttlcontainer">The men and women you served beside were your greatest asset in uniform, and will be your greatest asset in university and college. Now it's your turn to help.<br><br> Think about the challenges and mindsets you've learned about from curent veterans students. Prepare our troops returning to college by sharing below two concrete examples of ways they can turn each challenge into a strength to succeed as warrior-scholars.</div>
+
+<%= form_for(@user) do |f| %>
+<%= f.text_area_tag %>
+<%= f.submit "Make Your Mark" %>
+
 
 <div id="map" style="width: 800px; height: 600px;"></div>
 </body>
