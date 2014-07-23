@@ -36,8 +36,9 @@ input{
 
 /*home page*/
 
-.home {
-background-image: url("bgdesert.jpg");
+body.home {
+background-image: url("background.png");
+background-size: cover;
 }
 
 
