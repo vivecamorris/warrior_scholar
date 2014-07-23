@@ -13,14 +13,10 @@ class SessionsController < ApplicationController
        @showFirst = false;
        flash[:error] = 'Invalid Access Code. Click <a id ="apply-link" href="#">here</a> to apply.</br></br>'
   		 render 'static_pages/home'
-  end
-
+    end
   end
 
   def destroy
   end
-
-
-
 
 end
