@@ -27,7 +27,21 @@ class StaticPagesController < ApplicationController
   end
 
   def map
+
+
+    content = []
+    User.all.each do |user|
+      cont = ['<div class="info_content">' +
+        '<h3>' + user.fname + " " + user.lname +
+        '<p>' + user.map_comment + '</p>' +
+        '</div>']
+
+      content.push(cont,)
+    end
+    @content = content
     render :layout => "map_layout"
+
+
   end
 
 
