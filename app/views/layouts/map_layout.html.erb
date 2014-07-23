@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-    <%= stylesheet_link_tag    "map_layout", media: "all",
+    <%= stylesheet_link_tag    "application", media: "all",
                                             "data-turbolinks-track" => true %>
     <script
       type="text/javascript"
@@ -11,8 +11,8 @@
   <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.10.1.min.js"></script>
   </head>
   <body>
-            
-<%= yield %>
+  <%= yield %> 
+
 
   <script type="text/javascript">
     var locations = <%= raw @location %>;
@@ -30,7 +30,7 @@
 
 
     // Info Window Content
-    var infoWindowContent = <%= raw @content %>
+    var infoWindowContent = <%= raw @content %>;
 
 
 
@@ -80,5 +80,6 @@
     }
 
   </script> 
+ 
   </body>
 </html>

@@ -1,5 +1,18 @@
-<div class="bg">
-
-<div class="maphead"> </div>
-<div id="map" style="width: 800px; height: 600px;"></div>
+  <% provide(:bodyclass, 'video') %>
+ <% provide(:pbarimg, 'progressbar5.png') %>
+<body class = "map">
+<div class="header" id="mapheader">
 </div>
+ 
+ <div class="containerformargin">
+	<%= link_to image_tag("logogrey.png", alt: "The Warrior-Scholar Project", id: "logogrey"), '/' %> <div id="title">Warrior Scholar Project</div>
+	<%= image_tag("#{yield(:pbarimg)}", id: "progressbar") %>
+
+
+</div>
+<div class="ttlcontainer">Join the Thousands of Veterans Committed to<br>Preparing our Troops for College</div>
+
+<div class=""
+
+<div id="map" style="width: 800px; height: 600px;"></div>
+</body>

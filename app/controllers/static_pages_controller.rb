@@ -27,7 +27,7 @@ class StaticPagesController < ApplicationController
   end
 
   def map
-    # user = User.first
+    # user = current user ---!!!! how do I find this
     # request.remote_ip
     # user.ip_address = request.remote_ip
     # user.save
