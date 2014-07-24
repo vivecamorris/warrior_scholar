@@ -155,7 +155,9 @@ a {
 
 .containerformargin {
 	margin-left: 15%;
- 	margin-right: 15%;		
+ 	margin-right: 15%;
+ 	margin-top:5px;
+ 	margin-bottom:10px;		
 }
 
 #title {
@@ -298,4 +300,8 @@ input {
 
 #mapheader {
 	background-color: #F8F8F8;
+}
+
+#comment {
+	color:black;
 }

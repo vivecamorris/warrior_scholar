@@ -35,7 +35,7 @@ class StaticPagesController < ApplicationController
     content = []
     location = []
     User.all.each do |user|
-      cont = ['<div class="info_content">' +
+      cont = ['<div class="info_content" id="comment">' +
         '<h3>' + user.fname + " " + user.lname.to_s + '</h3>' +
         '<p>' + user.map_comment.to_s + '</p>' +
         '</div>']
@@ -49,7 +49,7 @@ class StaticPagesController < ApplicationController
     @location = location
  
 
-    @what = @current_user.fname
+    @what = @current_user
 
     render :layout => "map_layout"
 
