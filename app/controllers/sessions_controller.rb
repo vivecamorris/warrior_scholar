@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
 
   def create
   	user = User.find_by(access_code: params[:session][:access_code])
-  	if user && user.used == false || params[:session][:access_code] == ""
+  	if user && user.used == false
   		sign_in user
       # commented out for DEMO DAY! Can reuse same access code
   		# user.update_column(:used, true)
