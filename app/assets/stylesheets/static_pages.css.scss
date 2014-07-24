@@ -2,15 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-/*viveca test comment */
-
 body {
 	background-color: #424242;
 	margin: 0 auto;
 	font-family: 'Roboto', sans-serif;
 	color: #fff;
 }
-
 
 body.map {
 		background-color: #F8F8F8;
@@ -118,6 +115,26 @@ a {
 
 
 /*VIDEO PAGES*/
+
+.outer {
+	width: 100%;
+	margin: -125px auto 0;
+	height: 100%;
+	display: table;
+	position: relative;
+	z-index: -3;
+}
+
+.inner {
+	padding: 0 10px;
+	margin: 0 auto;
+}
+
+.content {
+	vertical-align: middle;
+	display: table-cell;
+	padding: 80px 0 0;
+}
 
 .js-video {
   height: 0;

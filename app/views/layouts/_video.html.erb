@@ -5,9 +5,13 @@
 	<%= link_to image_tag("logogrey.png", alt: "The Warrior-Scholar Project", id: "logogrey"), '/' %> <a href="/"> <div id="title">Warrior Scholar Project</div></a>
 	<%= image_tag("#{yield(:pbarimg)}", id: "progressbar") %>
 	
-	<div class="js-video vimeo widescreen">
-	<iframe id="video" src="<%= yield(:videolink)%>" frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<div class = "outer">
+	<div class = "content">
+		<div class="js-video vimeo widescreen inner">
+		<iframe id="video" src="<%= yield(:videolink)%>" frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+		</div>
 	</div>
+</div>
 
 
 </div>
@@ -22,7 +26,6 @@
 		<span id="ttl"><%=yield(:ttl)%></span> 
 		<div id="subttl"><%=yield(:subttl)%></div>
 		</span>
-
 	</div>
 
 	<%=link_to "#{yield(:nextpage)}" do %>
