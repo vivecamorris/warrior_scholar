@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   match '/video4', to: 'static_pages#video4', via: 'get'
   match '/video5', to: 'static_pages#video5', via: 'get'
   match '/map', to: 'static_pages#map', via: 'get'
+  match '/map', to: 'static_pages#map', via: 'post'
 
   resources :users
   resources :sessions, only: [:new, :create, :destroy]

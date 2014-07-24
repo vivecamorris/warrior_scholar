@@ -55,6 +55,9 @@ class StaticPagesController < ApplicationController
 
     @what = @current_user
 
+    @user = user
+
+
     render :layout => "map_layout"
 
 
