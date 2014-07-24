@@ -16,8 +16,9 @@
 
 <%= form_for :user do |f| %>
 
-	<%= f.text_field :map_comment, id: "inputs" %>
-	<%= f.submit "Make Your Mark" %>
+	<%= f.text_field :map_comment, :class => "map-input" %>
+	<%= f.submit "Make Your Mark", :class => "map-input" %>
+
 <% end %>
 
 
