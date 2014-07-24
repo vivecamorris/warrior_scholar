@@ -37,6 +37,7 @@ class StaticPagesController < ApplicationController
     user.map_comment ||= "Comment"
     user.fname ||= "Noname"
     user.lname ||= "Nolname"
+    user.save
     User.all.each do |user|
       cont = ['<div class="info_content" id="comment">' +
         '<h3>' + user.fname + " " + user.lname + '</h3>' +
