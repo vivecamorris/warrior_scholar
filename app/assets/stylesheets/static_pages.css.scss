@@ -289,7 +289,14 @@ a {
 	margint: auto;
 }
 
-
+.map-input {
+	display:block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 40px;
+	height:100px;
+	width:500px;
+}
 
 #mapheader {
 	background-color: #F8F8F8;
