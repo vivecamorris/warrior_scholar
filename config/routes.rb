@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   match '/video5', to: 'static_pages#video5', via: 'get'
   match '/map', to: 'static_pages#map', via: 'get'
   match '/map', to: 'static_pages#map', via: 'post'
+  match '/map2', to: 'static_pages#map2', via: 'post'
+  match '/map2', to: 'static_pages#map2', via: 'get'
 
   resources :users
   resources :sessions, only: [:new, :create, :destroy]

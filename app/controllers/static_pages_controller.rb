@@ -34,10 +34,42 @@ class StaticPagesController < ApplicationController
     #the following creates new users
     content = []
     location = []
-    user.map_comment ||= "Comment"
-    user.fname ||= "Noname"
-    user.lname ||= "Nolname"
+    user.map_comment ||= ""
+    user.fname ||= "N/A"
+    user.lname ||= "N/A"
     user.save
+    User.all.each do |user|
+      cont = ['<div class="info_content" id="comment">' +
+        '<h3>' + user.fname + " " + user.lname + '</h3>' +
+        '<p>' + user.map_comment + '</p>' +
+        '</div>']
+      loc = ['', user.latitude.floor, user.longitude.floor, user.id]
+
+      location.push(loc,)
+      content.push(cont,)
+    end
+
+    @content = content
+    @location = location
+ 
+
+    @what = @current_user
+
+    @user = user
+
+
+    render :layout => "map_layout"
+
+  end
+
+   def map2
+    current_user
+    user = @current_user
+    user.ip_address = request.remote_ip
+    user.save
+    #the following creates new users
+    content = []
+    location = []
     User.all.each do |user|
       cont = ['<div class="info_content" id="comment">' +
         '<h3>' + user.fname + " " + user.lname + '</h3>' +

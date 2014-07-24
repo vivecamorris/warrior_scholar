@@ -8,7 +8,7 @@ class UsersController < ApplicationController
 
   def update
    @user.update(map_comment: params[:user][:map_comment])
-   redirect_to map_url
+   redirect_to map2_url
  end
 
   private
