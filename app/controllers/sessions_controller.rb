@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
   		render 'static_pages/video1'
   	 else
        @showFirst = false;
-       flash[:error] = 'Invalid Access Code. Click <a id ="apply-link" href="#">here</a> to apply.'
+       flash[:error] = 'Invalid Access Code. Click <a id ="apply-link" href="https://warrior-scholar-project.slideroom.com/#/Login">here</a> to apply.'
   		 render 'static_pages/home'
     end
   end
