@@ -12,6 +12,9 @@ body {
 }
 
 
+body.map {
+		background-color: #F8F8F8;
+	}
 
 .hidden {
 	display: none;
@@ -40,9 +43,6 @@ body.home {
 background-image: image-url("background.png");
 background-size: cover;
 }
-
-
-
 
 #home-background {
   position: fixed; 
@@ -119,6 +119,31 @@ a {
 
 /*VIDEO PAGES*/
 
+.js-video {
+  height: 0;
+  padding-top: 25px;
+  padding-bottom: 67.5%;
+  margin-bottom: 10px;
+  position: relative;
+  overflow: hidden;
+}
+ 
+.js-video.widescreen {
+  padding-bottom: 57.25%;
+}
+ 
+.js-video.vimeo {
+  padding-top: 0;
+}
+
+.js-video embed, .js-video iframe, .js-video object, .js-video video {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
 .header {
 	height: 60px;
 	width: 100%;
@@ -154,7 +179,7 @@ a {
 
 #video {
 	width:  100%;
-	height: 500px;
+	height: 80%;
 	border: 0px;
 	display: block;
  	margin-top: 30px;
@@ -224,6 +249,7 @@ a {
     height: 800px;
 }
 
+
 #map_canvas {
     width: 100%;
     height: 100%;
@@ -233,4 +259,39 @@ a {
 	.nav-btn {
 		padding-top: 2vw;
 	}
+}
+
+.ttlcontainer {
+	background-color:white;
+	width:100%;
+	height: 120px;
+	display: block;
+	color: black;
+	text-align: center;
+	font-size:2em;
+	padding-top: 25px;
+	margin-bottom: 40px;
+}
+
+.subttlcontainer {
+	color: #484848;
+	text-align:center;
+	margin-left: 20%;
+	margin-right: 20%;
+	font-size: 1.1em;
+	margin-bottom: 40px
+}
+
+#map {
+	margin: auto;
+	margint: auto;
+}
+
+textarea {
+	display:block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 40px;
+	height:100px;
+	width:500px;
 }

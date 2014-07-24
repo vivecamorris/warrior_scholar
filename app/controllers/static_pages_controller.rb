@@ -36,8 +36,8 @@ class StaticPagesController < ApplicationController
     location = []
     User.all.each do |user|
       cont = ['<div class="info_content">' +
-        '<h3>' + user.fname + " " + user.lname + '</h3>' +
-        '<p>' + user.map_comment + '</p>' +
+        '<h3>' + user.fname + " " + user.lname.to_s + '</h3>' +
+        '<p>' + user.map_comment.to_s + '</p>' +
         '</div>']
       loc = ['', user.latitude.floor, user.longitude.floor, user.id]
 
@@ -48,7 +48,7 @@ class StaticPagesController < ApplicationController
     @content = content
     @location = location
  
-
+    @user = User.find_by(remember_token: cookies[:remember_token]).fname
 
     render :layout => "map_layout"
 
