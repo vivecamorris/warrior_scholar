@@ -56,8 +56,6 @@ class StaticPagesController < ApplicationController
 
     render :layout => "map_layout"
 
-
-
   end
 
 
