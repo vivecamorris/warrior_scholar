@@ -1,4 +1,5 @@
 class StaticPagesController < ApplicationController
+
     before_action :signed_in_user, only: [:video1, :video2, :video3,
      :video4, :video5]
     before_action :setShowFirst
@@ -27,10 +28,10 @@ class StaticPagesController < ApplicationController
   end
 
   def map
-    # user = current user ---!!!! how do I find this
-    # request.remote_ip
-    # user.ip_address = request.remote_ip
-    # user.save
+    current_user
+    user = @current_user
+    user.ip_address = request.remote_ip
+    user.save
     #the following creates new users
     content = []
     location = []
@@ -48,7 +49,8 @@ class StaticPagesController < ApplicationController
     @content = content
     @location = location
  
-    @user = User.find_by(remember_token: cookies[:remember_token]).fname
+
+    @what = @current_user.ip_address
 
     render :layout => "map_layout"
 
