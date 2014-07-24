@@ -5,9 +5,10 @@ class SessionsController < ApplicationController
 
   def create
   	user = User.find_by(access_code: params[:session][:access_code])
-  	if user && user.used == false
+  	if user && user.used == false || params[:session][:access_code] == ""
   		sign_in user
-  		user.update_column(:used, true)
+      # commented out for DEMO DAY! Can reuse same access code
+  		# user.update_column(:used, true)
   		render 'static_pages/video1'
   	 else
        @showFirst = false;
