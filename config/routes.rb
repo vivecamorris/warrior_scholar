@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root 'static_pages#home'
   match '/help', to: 'static_pages#help', via: 'get'
   match '/video1', to: 'static_pages#video1', via: 'get'
+  match '/video1b', to: 'static_pages#video1b', via: 'get'
   match '/video2', to: 'static_pages#video2', via: 'get'
   match '/video3', to: 'static_pages#video3', via: 'get'
   match '/video4', to: 'static_pages#video4', via: 'get'
