@@ -34,10 +34,11 @@ class StaticPagesController < ApplicationController
     #the following creates new users
     content = []
     location = []
+    user.map_comment ||= "Comment"
     User.all.each do |user|
       cont = ['<div class="info_content" id="comment">' +
-        '<h3>' + user.fname + " " + user.lname.to_s + '</h3>' +
-        '<p>' + user.map_comment.to_s + '</p>' +
+        '<h3>' + user.fname + " " + user.lname + '</h3>' +
+        '<p>' + user.map_comment + '</p>' +
         '</div>']
       loc = ['', user.latitude.floor, user.longitude.floor, user.id]
 
