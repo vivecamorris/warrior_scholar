@@ -115,7 +115,7 @@ class StaticPagesController < ApplicationController
         '</div>']
     ]
     location = [
-          ['', 32, -57, 5],
+          ['', 32, -90, 5],
           ['', 33, -115, 4],
           ['', 38, -76, 3],
           ['', 26, -80, 2],
