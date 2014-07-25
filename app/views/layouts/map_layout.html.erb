@@ -30,17 +30,18 @@
 
 
 
-    <script
-      type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkuiyOmS0FikjETYC8UhQMt7dsVa8dV08">
-    </script>
+
   <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.10.1.min.js"></script>
   </head>
   <body class=<%= yield(:bodyclass)%>
   <%= yield %> 
 
-
+    <script
+      type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkuiyOmS0FikjETYC8UhQMt7dsVa8dV08">
+    </script>
   <script type="text/javascript">
+
     var locations = <%= raw @location %>;
  
     var map = new google.maps.Map(document.getElementById('map'), {
