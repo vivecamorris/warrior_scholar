@@ -15,7 +15,7 @@
 
 <%= form_for(@user) do |f| %>
 
-	<%= f.text_area :map_comment, :class => "pure-form map-textfield", :id => "cel" %>
+	<%= f.text_area :map_comment, :class => "pure-form map-textfield", :id => "cel", :placeholder => "Share your advice for other Warrior-Scholars here." %>
 	<%= f.submit "Make Your Mark", :class => "map-submit pure-button pure-button-primary" %>
 
 <% end %>
