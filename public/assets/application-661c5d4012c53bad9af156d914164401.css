@@ -1,0 +1,302 @@
+body {
+  background-color: #424242;
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+  color: #fff; }
+
+body.map {
+  background-color: #F8F8F8; }
+
+.hidden {
+  display: none; }
+
+.alert {
+  margin-bottom: 20px; }
+
+input {
+  margin: 0 auto; }
+
+.get-started-button {
+  margin-top: 6px; }
+
+.alert a {
+  font-weight: bold;
+  color: #1181A2; }
+
+/*home page*/
+body.home {
+  background-image: url(/assets/background.png);
+  background-size: cover; }
+
+#home-background {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  z-index: -5; }
+
+#home-background img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 50%;
+  min-height: 50%; }
+
+h1 {
+  font-size: 2.5em;
+  margin: .67em 0;
+  margin-top: 0.67em;
+  margin-right: 0px;
+  margin-bottom: 0.67em;
+  margin-left: 0px; }
+
+p {
+  padding: 20px; }
+
+.home-page-style-button {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  text-align: center;
+  width: 250px;
+  color: #fff;
+  background-image: linear-gradient(to bottom, #a8ba6d, #a3b355);
+  background-color: #a6b763;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  padding: 5px;
+  border-radius: 30px;
+  display: block;
+  font-size: 25px;
+  border: 2px;
+  line-height: 50px; }
+
+a {
+  text-decoration: none;
+  color: white; }
+
+.button-xlarge {
+  font-size: 125%; }
+
+#logo {
+  margin: 2%; }
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; }
+
+/*VIDEO PAGES*/
+.outer {
+  width: 100%;
+  margin: -125px auto 0;
+  height: 100%;
+  display: table;
+  position: relative; }
+
+.inner {
+  padding: 0 10px;
+  margin: 0 auto; }
+
+.content {
+  vertical-align: middle;
+  display: table-cell;
+  padding: 80px 0 0;
+  max-width: 960px;
+  max-height: 600px;
+  margin: 0 auto; }
+
+.js-video {
+  height: 100%;
+  width: 100%;
+  padding-top: 25px;
+  padding-bottom: 67.5%;
+  position: relative;
+  overflow: hidden; }
+
+.js-video.widescreen {
+  padding-bottom: 57.25%; }
+
+.js-video.vimeo {
+  padding-top: 0; }
+
+.js-video embed, .js-video iframe, .js-video object, .js-video video {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute; }
+
+.header {
+  height: 60px;
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  top: 0px;
+  z-index: -2; }
+
+.containerformargin {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 5px;
+  margin-bottom: 5px; }
+
+#title {
+  display: inline;
+  color: #707070;
+  font-size: 18px;
+  position: absolute;
+  margin-top: 17.5px;
+  margin-left: 10px; }
+
+#progressbar {
+  height: 25px;
+  float: right;
+  margin-top: 17.5px; }
+
+#logogrey {
+  width: 50px;
+  margin-top: 6px; }
+
+#video {
+  width: 100%;
+  height: 85%;
+  border: 0px;
+  display: block;
+  margin-top: 30px; }
+
+/*footer*/
+.topfooter {
+  background-color: white;
+  width: 100%;
+  height: 85px;
+  position: fixed;
+  bottom: 0; }
+
+.nav-btn {
+  position: absolute;
+  height: 100%;
+  width: 15%;
+  background-color: #C0C0C0;
+  text-align: center;
+  font-size: 3em;
+  padding-top: 1vw; }
+
+#left-btn {
+  left: 0px; }
+
+#right-btn {
+  top: 0px;
+  right: 0px; }
+
+.vid-ttl {
+  position: relative;
+  margin-left: 17%; }
+
+#vid-btn {
+  background: #C0C0C0;
+  width: 150px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  margin-top: 12px;
+  display: inline-block; }
+
+.text-ttl {
+  position: absolute;
+  margin-left: 20px;
+  color: #333333;
+  margin-top: 17px; }
+
+#subttl {
+  font-size: 20px; }
+
+/*MAP PAGE */
+#map_wrapper {
+  width: 80%; }
+
+#map_canvas {
+  width: 80%;
+  height: 100%; }
+
+@media all and (max-width: 40em) {
+  .nav-btn {
+    padding-top: 2vw; } }
+/*
+@media (max-width: 800px) {
+    .hidden-800 {
+        display:none !important;
+    }
+}*/
+@media (max-width: 700px) {
+  #cel {
+    width: 80%;
+    margin-left: 10%; }
+
+  .cel {
+    width: 80%; } }
+.ttlcontainer {
+  background-color: white;
+  width: 100%;
+  padding-bottom: 25px;
+  display: block;
+  color: black;
+  text-align: center;
+  font-size: 2em;
+  padding-top: 25px;
+  margin-bottom: 40px; }
+
+.subttlcontainer {
+  color: #484848;
+  text-align: center;
+  margin-left: 20%;
+  margin-right: 20%;
+  font-size: 1.1em;
+  margin-bottom: 40px; }
+
+#map {
+  margin: auto;
+  margin: auto;
+  width: 80%; }
+
+.map-textfield {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+  height: 100px;
+  width: 40%; }
+
+.map-submit {
+  display: block;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto; }
+
+#mapheader {
+  background-color: #F8F8F8; }
+
+#comment {
+  color: black; }
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
