@@ -1,6 +1,5 @@
  <% provide(:bodyclass, 'map') %>
  <% provide(:pbarimg, 'progressbar5.png') %>
-<div class = "map">
 <div class="header" id="mapheader">
 </div>
  
@@ -17,7 +16,7 @@
 <%= form_for(@user) do |f| %>
 
 	<%= f.text_area :map_comment, :class => "pure-form map-textfield", :id => "cel" %>
-	<%= f.submit "Make Your Mark", :class => "map-submit pure-button pure-button-primary" %></div>
+	<%= f.submit "Make Your Mark", :class => "map-submit pure-button pure-button-primary" %>
 
 <% end %>
 
@@ -31,4 +30,4 @@
 <br>
 
 <div> Warrior Scholar Project Horizon. </div>
-</body>
+
