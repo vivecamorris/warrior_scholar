@@ -35,9 +35,9 @@ class StaticPagesController < ApplicationController
     content = [
         ['<div class="info_content" id="comment">' +
         '<h3>Rob Henderson</h3>' +
-        '<p>Rob was one of the 2014 Yale Warrior Scholars and a seven-year veteran of the Air Force</b> based at Ramstein Air Base in Germany. When he first went back to school after serving, he resigned himself to taking classes online from public colleges:. </br></br> raised my expectation for myself. It made me think, &lsquo;Maybe I can go to a school like this.&rsquo;</div>'],
+        '<p>Rob was one of the 2014 Yale Warrior Scholars and a seven-year veteran of the Air Force</b> based at Ramstein Air Base in Germany. When he first went back to school after serving, he resigned himself to taking classes online from public colleges:. </br></br><em> It raised my expectation for myself. It made me think, &lsquo;Maybe I can go to a school like this.&rsquo;</em></div>'],
         ['<div class="info_content" id = "comment">' +
-        'Wololo' +
+        '<h3>Chris Howell</h3>' +
         '<p>Prior to coming to Yale, Chris spent nine years in the Australian Army, most of them in Special Operations. He served in Afghanistan in 2006 with the Combined Special Operations Task Force. He had always wanted to go to college, but doubted his ability to succeed. </br></br><em>I had done poorly in high school. But when I decided to leave the military in 2008, my brother, David, a Ph.D. student at Sydney University, told me that I needed to learn <em> how </em> to be a student... He helped me to think beyond my experience in the serve, so that when I got to Yale, I could hit the ground running.</em> </br></br> Howell went on to co-found the Warrior-Scholar Project and graduated from Yale as an Eli Whitney Scholar in May 2014. </p>' +
         '</div>'],
          ['<div class="info_content" id = "comment">' +
@@ -96,9 +96,9 @@ class StaticPagesController < ApplicationController
     content = [
         ['<div class="info_content" id="comment">' +
         '<h3>Rob Henderson</h3>' +
-        '<p>Rob was one of the 2014 Yale Warrior Scholars and a seven-year veteran of the Air Force</b> based at Ramstein Air Base in Germany. When he first went back to school after serving, he resigned himself to taking classes online from public colleges:. </br></br> raised my expectation for myself. It made me think, &lsquo;Maybe I can go to a school like this.&rsquo;</div>'],
+        '<p>Rob was one of the 2014 Yale Warrior Scholars and a seven-year veteran of the Air Force</b> based at Ramstein Air Base in Germany. When he first went back to school after serving, he resigned himself to taking classes online from public colleges:. </br></br><em> It raised my expectation for myself. It made me think, &lsquo;Maybe I can go to a school like this.&rsquo;</em></div>'],
         ['<div class="info_content" id = "comment">' +
-        'Wololo' +
+        '<h3>Chris Howell</h3>' +
         '<p>Prior to coming to Yale, Chris spent nine years in the Australian Army, most of them in Special Operations. He served in Afghanistan in 2006 with the Combined Special Operations Task Force. He had always wanted to go to college, but doubted his ability to succeed. </br></br><em>I had done poorly in high school. But when I decided to leave the military in 2008, my brother, David, a Ph.D. student at Sydney University, told me that I needed to learn <em> how </em> to be a student... He helped me to think beyond my experience in the serve, so that when I got to Yale, I could hit the ground running.</em> </br></br> Howell went on to co-found the Warrior-Scholar Project and graduated from Yale as an Eli Whitney Scholar in May 2014. </p>' +
         '</div>'],
          ['<div class="info_content" id = "comment">' +
