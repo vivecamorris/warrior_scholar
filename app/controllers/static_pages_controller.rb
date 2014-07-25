@@ -1,6 +1,6 @@
 class StaticPagesController < ApplicationController
     before_action :signed_in_user, only: [:video1, :video2, :video3,
-     :video4, :video5]
+     :video4, :video5, :map, :map2]
     before_action :setShowFirst
 
 
