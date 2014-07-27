@@ -201,6 +201,10 @@ body.map .containerformargin {
 	margin-top:17.5px;
 	margin-right: 10%;
 
+	@media screen and (max-width: 35.5em) {
+		display: none;
+	}	
+
 }
 
 body.map #progressbar{
