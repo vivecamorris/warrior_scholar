@@ -39,6 +39,8 @@ input{
 body.home {
 background-image: image-url("background.png");
 background-size: cover;
+background-attachment: fixed;
+
 }
 
 #home-background {
