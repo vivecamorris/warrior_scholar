@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   match '/map', to: 'static_pages#map', via: 'post'
   match '/map2', to: 'static_pages#map2', via: 'post'
   match '/map2', to: 'static_pages#map2', via: 'get'
+    match '/mentors', to: 'static_pages#mentors', via: 'get'
 
   resources :users
   resources :sessions, only: [:new, :create, :destroy]

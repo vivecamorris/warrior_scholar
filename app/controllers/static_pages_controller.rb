@@ -148,7 +148,11 @@ class StaticPagesController < ApplicationController
 
   end
 
+  def mentors
 
+    render :layout => "mentors_layout"
+
+  end
 
 
   private
