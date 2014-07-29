@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  videolink: MyString
+  pbarimg: MyString
+  vidnum: MyString
+  ttl: MyString
+  subttl: MyString
+
+two:
+  videolink: MyString
+  pbarimg: MyString
+  vidnum: MyString
+  ttl: MyString
+  subttl: MyString
