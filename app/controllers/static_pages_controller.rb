@@ -157,7 +157,8 @@ class StaticPagesController < ApplicationController
       unless signed_in?
             #store_location
           @showFirst = false;
-          render "static_pages/home", notice: "Please sign in." unless signed_in?
+          flash[:error] = 'You must login to access this section.'
+          render "static_pages/home"
         end
 
 
