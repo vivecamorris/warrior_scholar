@@ -3,25 +3,10 @@ class VideosController < ApplicationController
 	def show
 		@video = Video.find(params[:id])
 
-		prev_and_next_vids(@video)
+		@prev_vid = Video.prev_vid(@video)
+		@next_vid = Video.next_vid(@video)
 	end
 
 
-	private
-
-		def prev_and_next_vids(video)
-
-			if video.id > 1
-				@prev_vid = Video.find(video.id - 1)
-			else
-				@prev_vid = nil
-			end
-
-			if video.id < 6
-				@next_vid = Video.find(video.id + 1)
-			else
-				@next_vid = nil
-			end
-
-		end
+	
 end
