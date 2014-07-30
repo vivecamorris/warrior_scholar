@@ -5,17 +5,11 @@ Rails.application.routes.draw do
 
 
   match '/help', to: 'static_pages#help', via: 'get'
-  # match '/video1', to: 'static_pages#video1', via: 'get'
-  # match '/video1b', to: 'static_pages#video1b', via: 'get'
-  # match '/video2', to: 'static_pages#video2', via: 'get'
-  # match '/video3', to: 'static_pages#video3', via: 'get'
-  # match '/video4', to: 'static_pages#video4', via: 'get'
-  # match '/video5', to: 'static_pages#video5', via: 'get'
   match '/map', to: 'static_pages#map', via: 'get'
   match '/map', to: 'static_pages#map', via: 'post'
   match '/map2', to: 'static_pages#map2', via: 'post'
   match '/map2', to: 'static_pages#map2', via: 'get'
-    match '/mentors', to: 'static_pages#mentors', via: 'get'
+  match '/mentors', to: 'static_pages#mentors', via: 'get'
 
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
