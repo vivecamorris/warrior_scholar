@@ -6,6 +6,7 @@ class StaticPagesController < ApplicationController
 
   def home
       # @showFirst ||= true
+      @video = Video.find(1)
   end
 
   def help
