@@ -30,7 +30,7 @@
 
 	<% else %>
 
-		<%=link_to "#{yield(:previouspage)}" do %>
+		<%=link_to @prev_vid do %>
 			<div id="left-btn" class="nav-btn">&lt;</div>
 		<%end%>
 
@@ -49,7 +49,7 @@
 
 	<% if @video.id < 6 %>
 
-		<%=link_to "#{yield(:nextpage)}" do %>
+		<%=link_to @next_vid do %>
 			<div id="right-btn" class="nav-btn">&gt;</div>
 		<%end%>
 

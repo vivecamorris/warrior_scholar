@@ -1,5 +1,11 @@
 module VideosHelper
 
+	def test
+		puts "the helper worked!"
+	end
+	
+
+
 	def prev_and_next_vids(video)
 
 		if video.id > 1
