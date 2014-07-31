@@ -17,7 +17,7 @@ class Video < ActiveRecord::Base
 
 	def self.next_vid(video)
 
-			if video.id < 6
+			if video.id < 5
 				next_vid = Video.find(video.id + 1)
 			else
 				next_vid = nil
