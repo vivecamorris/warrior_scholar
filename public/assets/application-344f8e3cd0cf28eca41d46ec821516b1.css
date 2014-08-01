@@ -1,4 +1,3 @@
-/*viveca test comment */
 body {
   background-color: #424242;
   margin: 0 auto;
@@ -27,7 +26,8 @@ input {
 /*home page*/
 body.home {
   background-image: url(/assets/background.png);
-  background-size: cover; }
+  background-size: cover;
+  background-attachment: fixed; }
 
 #home-background {
   position: fixed;
@@ -91,11 +91,30 @@ a {
   text-align: center; }
 
 /*VIDEO PAGES*/
+.outer {
+  width: 100%;
+  margin: -125px auto 0;
+  height: 100%;
+  display: table;
+  position: relative; }
+
+.inner {
+  padding: 0 10px;
+  margin: 0 auto; }
+
+.content {
+  vertical-align: middle;
+  display: table-cell;
+  padding: 80px 0 0;
+  max-width: 960px;
+  max-height: 600px;
+  margin: 0 auto; }
+
 .js-video {
-  height: 0;
+  height: 100%;
+  width: 100%;
   padding-top: 25px;
   padding-bottom: 67.5%;
-  margin-bottom: 10px;
   position: relative;
   overflow: hidden; }
 
@@ -118,11 +137,16 @@ a {
   background-color: white;
   position: fixed;
   top: 0px;
-  z-index: -2; }
+  z-index: 1; }
 
 .containerformargin {
-  margin-left: 15%;
-  margin-right: 15%; }
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 100px;
+  margin-bottom: 5px; }
+
+body.map .containerformargin {
+  margin-top: 5px; }
 
 #title {
   display: inline;
@@ -135,15 +159,26 @@ a {
 #progressbar {
   height: 25px;
   float: right;
-  margin-top: 17.5px; }
+  margin-top: 17.5px;
+  margin-right: 10%; }
+  @media screen and (max-width: 35.5em) {
+    #progressbar {
+      display: none; } }
+
+body.map #progressbar {
+  margin-right: 0px; }
 
 #logogrey {
+  margin-left: 10%;
   width: 50px;
   margin-top: 6px; }
 
+body.map #logogrey {
+  margin-left: 0px; }
+
 #video {
   width: 100%;
-  height: 80%;
+  height: 85%;
   border: 0px;
   display: block;
   margin-top: 30px; }
@@ -153,7 +188,7 @@ a {
   background-color: white;
   width: 100%;
   height: 85px;
-  position: absolute;
+  position: fixed;
   bottom: 0; }
 
 .nav-btn {
@@ -199,19 +234,32 @@ a {
 
 /*MAP PAGE */
 #map_wrapper {
-  height: 800px; }
+  width: 80%; }
 
 #map_canvas {
-  width: 100%;
+  width: 80%;
   height: 100%; }
 
 @media all and (max-width: 40em) {
   .nav-btn {
     padding-top: 2vw; } }
+/*
+@media (max-width: 800px) {
+    .hidden-800 {
+        display:none !important;
+    }
+}*/
+@media (max-width: 700px) {
+  #cel {
+    width: 80%;
+    margin-left: 10%; }
+
+  .cel {
+    width: 80%; } }
 .ttlcontainer {
   background-color: white;
   width: 100%;
-  height: 120px;
+  padding-bottom: 25px;
   display: block;
   color: black;
   text-align: center;
@@ -229,15 +277,78 @@ a {
 
 #map {
   margin: auto;
-  margint: auto; }
+  margin: auto;
+  width: 80%; }
 
-textarea {
+.map-textfield {
   display: block;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 40px;
   height: 100px;
-  width: 500px; }
+  width: 40%; }
+
+.map-submit {
+  display: block;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto; }
+
+#mapheader {
+  background-color: #F8F8F8; }
+
+#comment {
+  color: black; }
+
+/* Mentors Page */
+/* description here of general layout: http://www.dwuser.com/education/content/creating-responsive-tiled-layout-with-pure-css/; */
+#mentor-container {
+  margin: 0;
+  padding: 0;
+  background: #EEE;
+  font: 10px/12px 'Roboto'; }
+
+.wrap {
+  overflow: hidden;
+  margin: 10px; }
+
+.box {
+  float: left;
+  position: relative;
+  width: 20%;
+  padding-bottom: 20%; }
+
+.boxInner {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  top: 10px;
+  bottom: 10px;
+  overflow: hidden; }
+
+.boxInner img {
+  width: 100%; }
+
+@media only screen and (max-width: 480px) {
+  /* Smartphone view: 1 tile */
+  .box {
+    width: 100%;
+    padding-bottom: 100%; } }
+@media only screen and (max-width: 650px) and (min-width: 481px) {
+  /* Tablet view: 2 tiles */
+  .box {
+    width: 50%;
+    padding-bottom: 50%; } }
+@media only screen and (max-width: 1050px) and (min-width: 651px) {
+  /* Small desktop / ipad view: 3 tiles */
+  .box {
+    width: 33.3%;
+    padding-bottom: 33.3%; } }
+@media only screen and (max-width: 1290px) and (min-width: 1051px) {
+  /* Medium desktop: 4 tiles */
+  .box {
+    width: 25%;
+    padding-bottom: 25%; } }
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
