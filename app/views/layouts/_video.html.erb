@@ -1,0 +1,101 @@
+<% content_for :head do %>
+
+<script language="javascript" type="text/javascript">
+function showHide(shID) {
+   if (document.getElementById(shID)) {
+      if (document.getElementById(shID+'-show').style.display != 'none') {
+         document.getElementById(shID+'-show').style.display = 'none';
+         document.getElementById(shID).style.display = 'block';
+      }
+      else {
+         document.getElementById(shID+'-show').style.display = 'inline';
+         document.getElementById(shID).style.display = 'none';
+      }
+   }
+}
+</script>
+
+<% end %>
+
+<% provide(:bodyclass, 'video') %>
+<div class="header">
+
+	
+	<%= link_to image_tag("logogrey.png", alt: "The Warrior-Scholar Project", id: "logogrey"), '/' %> <a href="/"> <div id="title">Warrior Scholar Project</div></a>
+	<%= image_tag("#{yield(:pbarimg)}", id: "progressbar") %>
+
+</div>
+
+<div class="containerformargin">
+
+	<div class = "outer">
+		<div class = "content">
+			<div class="js-video vimeo widescreen inner">
+			<iframe id="video" src="<%= yield(:videolink)%>" frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+			</div>
+
+			<div class="video-description-wrapper">
+				
+				<a href="#" id="example-show" class="showLink" onclick="showHide('example');return false;">&#8595; See video description.</a>
+				
+				<div id="example" class="more">
+					
+					<p><%=yield(:videodescription)%></br></br>
+					
+					<a href="#" id="example-hide" class="hideLink" onclick="showHide('example');return false;">&#8593; Hide video description.</a></p>
+				
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+<div class="topfooter">
+
+	<% if @video.id == 1 %>
+
+		<%=link_to "/" do %>
+			<div id="left-btn" class="nav-btn">&lt;</div>
+		<%end%>
+
+	<% else %>
+
+		<%=link_to @prev_vid do %>
+			<div id="left-btn" class="nav-btn">&lt;</div>
+		<%end%>
+
+	<%end%>
+
+
+
+
+	<div class="vid-ttl">
+
+		<div id="vid-btn"><%=yield(:vidnum)%> of 5</div>
+		<span class="text-ttl">
+		<span id="ttl"><%=yield(:ttl)%></span> 
+		<div id="subttl"><%=yield(:subttl)%></div>
+		</span>
+
+	</div>
+
+	<% if @video.id < 5 %>
+		<% puts @next_vid %>
+		<%=link_to @next_vid do %>
+			<div id="right-btn" class="nav-btn">&gt;</div>
+		<%end%>
+
+	<%else%>
+		
+		<%=link_to "/map" do %>
+			<div id="right-btn" class="nav-btn">&gt;</div>
+		<%end%>
+
+	<%end%>
+
+
+
+</div>
