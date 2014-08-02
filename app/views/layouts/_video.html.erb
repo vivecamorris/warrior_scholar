@@ -28,32 +28,31 @@ function showHide(shID) {
 
 <div class="containerformargin">
 
-<div class = "outer">
-	<div class = "content">
-		<div class="js-video vimeo widescreen inner">
-		<iframe id="video" src="<%= yield(:videolink)%>" frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-		</div>
+	<div class = "outer">
+		<div class = "content">
+			<div class="js-video vimeo widescreen inner">
+			<iframe id="video" src="<%= yield(:videolink)%>" frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+			</div>
 
-			<!-- start of video description code -->
-				<div class="video-description-wrapper">
+			<div class="video-description-wrapper">
+				
+				<a href="#" id="example-show" class="showLink" onclick="showHide('example');return false;">&#8595; See video description.</a>
+				
+				<div id="example" class="more">
 					
-					<a href="#" id="example-show" class="showLink" onclick="showHide('example');return false;">&#8595; See video description.</a>
+					<p><%=yield(:videodescription)%></br></br>
 					
-					<div id="example" class="more">
-						
-						<p><%=yield(:videodescription)%></br></br>
-						
-						<a href="#" id="example-hide" class="hideLink" onclick="showHide('example');return false;">&#8593; Hide video description.</a></p>
-					
-					</div>
+					<a href="#" id="example-hide" class="hideLink" onclick="showHide('example');return false;">&#8593; Hide video description.</a></p>
+				
 				</div>
-			<!-- end of video description code -->
+			</div>
+
+		</div>
 
 	</div>
 
 </div>
 
-</div>
 <div class="topfooter">
 
 	<% if @video.id == 1 %>
