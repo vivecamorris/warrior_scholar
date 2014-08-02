@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20140801140912) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "users", force: true do |t|
     t.string   "access_code"
     t.string   "fname"
@@ -28,7 +31,7 @@ ActiveRecord::Schema.define(version: 20140801140912) do
     t.string   "ip_address"
   end
 
-  add_index "users", ["remember_token"], name: "index_users_on_remember_token"
+  add_index "users", ["remember_token"], name: "index_users_on_remember_token", using: :btree
 
   create_table "videos", force: true do |t|
     t.string   "videolink"
