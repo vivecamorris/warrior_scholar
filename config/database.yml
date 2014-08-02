@@ -26,11 +26,3 @@ test:
   username: postgres
   password: sharlach1
 
-production:
-  adapter: postgresql
-  encoding: utf8
-  pool: 5
-  host: localhost
-  database: ws_production
-  username: postgres
-  password: sharlach1
