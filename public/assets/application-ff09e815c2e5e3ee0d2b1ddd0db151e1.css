@@ -26,7 +26,8 @@ input {
 /*home page*/
 body.home {
   background-image: url(/assets/background.png);
-  background-size: cover; }
+  background-size: cover;
+  background-attachment: fixed; }
 
 #home-background {
   position: fixed;
@@ -89,7 +90,29 @@ a {
   margin-right: auto;
   text-align: center; }
 
-/*VIDEO PAGES*/
+/* VIDEO PAGES */
+/* This CSS is used for the show/hide functionality for the video descriptions. */
+.more {
+  color: #fff;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+a.showLink, a.hideLink {
+  text-decoration: none;
+  color: #C0C0C0;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+a.showLink:hover, a.hideLink:hover {
+  color: #fff; }
+
+.video-description-wrapper {
+  position: relative; }
+
+/* End of the CSS used for the show/hide functionality */
 .outer {
   width: 100%;
   margin: -125px auto 0;
@@ -136,13 +159,16 @@ a {
   background-color: white;
   position: fixed;
   top: 0px;
-  z-index: -2; }
+  z-index: 1; }
 
 .containerformargin {
   margin-left: 10%;
   margin-right: 10%;
-  margin-top: 5px;
+  margin-top: 100px;
   margin-bottom: 5px; }
+
+body.map .containerformargin {
+  margin-top: 5px; }
 
 #title {
   display: inline;
@@ -155,11 +181,22 @@ a {
 #progressbar {
   height: 25px;
   float: right;
-  margin-top: 17.5px; }
+  margin-top: 17.5px;
+  margin-right: 10%; }
+  @media screen and (max-width: 35.5em) {
+    #progressbar {
+      display: none; } }
+
+body.map #progressbar {
+  margin-right: 0px; }
 
 #logogrey {
+  margin-left: 10%;
   width: 50px;
   margin-top: 6px; }
+
+body.map #logogrey {
+  margin-left: 0px; }
 
 #video {
   width: 100%;
@@ -284,6 +321,56 @@ a {
 
 #comment {
   color: black; }
+
+/* Mentors Page */
+/* description here of general layout: http://www.dwuser.com/education/content/creating-responsive-tiled-layout-with-pure-css/; */
+#mentor-container {
+  margin: 0;
+  padding: 0;
+  background: #EEE;
+  font: 10px/12px 'Roboto'; }
+
+.wrap {
+  overflow: hidden;
+  margin: 10px; }
+
+.box {
+  float: left;
+  position: relative;
+  width: 20%;
+  padding-bottom: 20%; }
+
+.boxInner {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  top: 10px;
+  bottom: 10px;
+  overflow: hidden; }
+
+.boxInner img {
+  width: 100%; }
+
+@media only screen and (max-width: 480px) {
+  /* Smartphone view: 1 tile */
+  .box {
+    width: 100%;
+    padding-bottom: 100%; } }
+@media only screen and (max-width: 650px) and (min-width: 481px) {
+  /* Tablet view: 2 tiles */
+  .box {
+    width: 50%;
+    padding-bottom: 50%; } }
+@media only screen and (max-width: 1050px) and (min-width: 651px) {
+  /* Small desktop / ipad view: 3 tiles */
+  .box {
+    width: 33.3%;
+    padding-bottom: 33.3%; } }
+@media only screen and (max-width: 1290px) and (min-width: 1051px) {
+  /* Medium desktop: 4 tiles */
+  .box {
+    width: 25%;
+    padding-bottom: 25%; } }
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
