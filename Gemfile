@@ -1,11 +1,25 @@
 source 'https://rubygems.org'
 ruby '1.9.3'
 
+
+
+
+
+
 gem 'rails', '4.1.1'
 gem 'tzinfo-data'
 gem 'sprockets', '2.12.1'
 gem 'pg', '0.15.1'
-gem 'unicorn'
+
+platforms :ruby do # for mac/linux
+  gem 'unicorn'
+end
+
+platforms :mswin do
+	gem 'thin'	
+end
+
+
 
 
 gem 'sass-rails', '4.0.1'
