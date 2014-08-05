@@ -10,6 +10,7 @@ gem 'rails', '4.1.1'
 gem 'tzinfo-data'
 gem 'sprockets', '2.12.1'
 gem 'pg', '0.15.1'
+gem 'newrelic_rpm'
 
 platforms :ruby do # for mac/linux
   gem 'unicorn'
@@ -18,9 +19,6 @@ end
 platforms :mswin do
 	gem 'thin'	
 end
-
-
-
 
 gem 'sass-rails', '4.0.1'
 gem 'uglifier', '2.1.1'
