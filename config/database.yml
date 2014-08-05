@@ -13,7 +13,7 @@ development:
   database: ws_development
   host: localhost
   username: postgres
-  password: sharlach1
+  password: Boris8992
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
@@ -24,5 +24,5 @@ test:
   database: ws_test
   host: localhost  
   username: postgres
-  password: sharlach1
+  password: Boris8992
 
