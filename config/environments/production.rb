@@ -1,6 +1,9 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  # sets up Amazon Web Services' CDN
+  config.action_controller.asset_host = "d6ucz95bepzmb.cloudfront.net.cloudfront.net"
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 
