@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
       # commented out for DEMO DAY! Can reuse same access code
   		# user.update_column(:used, true)
       @next_vid = Video.next_vid(@video)
-  		render 'videos/show'
+  		redirect_to video_url(@video.id)
   	 else
        @showFirst = false;
        flash[:error] = 'Invalid Access Code. Click <a id ="apply-link" href="https://warrior-scholar-project.slideroom.com/#/Login">here</a> to apply.'
