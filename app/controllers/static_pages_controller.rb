@@ -12,21 +12,6 @@ class StaticPagesController < ApplicationController
   def help
   end
 
-  def video1
-  end
-
-  def video2
-  end
-
-  def video3
-  end
-
-  def video4
-  end
-
-  def video5
-  end
-
   def map
       current_user
     user = @current_user
