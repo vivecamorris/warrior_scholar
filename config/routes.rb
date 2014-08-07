@@ -1,18 +1,17 @@
 Rails.application.routes.draw do
+
   root 'static_pages#home'
   resources :videos, only: [:show]
 
-
-
-  match '/help', to: 'static_pages#help', via: 'get'
   match '/map', to: 'static_pages#map', via: 'get'
   match '/map', to: 'static_pages#map', via: 'post'
   match '/map2', to: 'static_pages#map2', via: 'post'
   match '/map2', to: 'static_pages#map2', via: 'get'
   match '/mentors', to: 'static_pages#mentors', via: 'get'
 
-  resources :users
+  resources :users, only: [:edit, :update]
   resources :sessions, only: [:new, :create, :destroy]
+  
   match '/signin',  to: 'sessions#new',         via: 'get'
   match '/signout', to: 'sessions#destroy',     via: 'delete'
 

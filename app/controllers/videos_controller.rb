@@ -1,4 +1,5 @@
 class VideosController < ApplicationController
+    before_action :signed_in_user
 
 	def show
 		@video = Video.find(params[:id])
@@ -8,5 +9,5 @@ class VideosController < ApplicationController
 	end
 
 
-	
+		
 end
