@@ -7,7 +7,7 @@ class StaticPagesController < ApplicationController
   end
 
   def map
-      current_user
+    current_user
     user = @current_user
     user.ip_address = request.remote_ip
     user.save
@@ -16,19 +16,20 @@ class StaticPagesController < ApplicationController
     content = StaticPagesHelper.hardcoded_content
     location =  StaticPagesHelper.hardcoded_location
 
-    #the following creates new users
+    #the following adds users to the map
     User.all.each do |user|
       if user.map_comment != nil
-      cont = ['<div class="info_content" id="comment">' +
-        '<h3>' + user.fname + " " + user.lname + '</h3>' +
-        '<p>' + user.map_comment + '</p>' +
-        '</div>']
-        newid=user.id+5
-      loc = ['', user.latitude.floor, user.longitude.floor, newid]
+          cont = ['<div class="info_content" id="comment">' +
+            '<h3>' + user.fname + " " + user.lname + '</h3>' +
+            '<p>' + user.map_comment + '</p>' +
+            '</div>']
+          
+          newid=user.id+5
+          loc = ['', user.latitude.floor, user.longitude.floor, newid]
 
-      location.push(loc,)
-      content.push(cont,)
-    end
+          location.push(loc,)
+          content.push(cont,)
+      end
     end
 
     @content = content
