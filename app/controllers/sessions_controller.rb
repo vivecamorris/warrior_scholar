@@ -7,11 +7,9 @@ class SessionsController < ApplicationController
   	user = User.find_by(access_code: params[:session][:access_code])
   	if user && user.used == false
   		sign_in user
-      @video = Video.find(1)
       # commented out for DEMO DAY! Can reuse same access code
   		# user.update_column(:used, true)
-      @next_vid = Video.next_vid(@video)
-  		redirect_to video_url(@video.id)
+  		redirect_to video_url(1)
   	 else
        @showFirst = false;
        flash[:error] = 'Invalid Access Code. Click <a id ="apply-link" href="https://warrior-scholar-project.slideroom.com/#/Login">here</a> to apply.'
