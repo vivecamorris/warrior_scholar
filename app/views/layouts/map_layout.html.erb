@@ -18,7 +18,7 @@
                                             "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
-   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no ">
+   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
   <link href='http://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
      <!--[if lt IE 9]>
@@ -33,18 +33,12 @@
 
 
   <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.10.1.min.js"></script>
-  </head>
-  <body class=<%= yield(:bodyclass)%>>
-  <%= yield %> 
 
-    <script
-      type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkuiyOmS0FikjETYC8UhQMt7dsVa8dV08">
-    </script>
+
   <script type="text/javascript">
 
-    var locations = <%= raw @location %>;
- 
+  function initialize() {
+
     var map = new google.maps.Map(document.getElementById('map'), {
       zoom: 4,
       streetViewControl: false,
@@ -59,8 +53,7 @@
 
     // Info Window Content
     var infoWindowContent = <%= raw @content %>;
-
-
+    var locations = <%= raw @location %>;
 
      // Display multiple markers on a map
 
@@ -85,7 +78,33 @@
       })(marker, i));
     }
 
+  }
+
+
+  function loadScript() {
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&' +
+        'callback=initialize';
+    document.body.appendChild(script);
+  }
+
+  window.onload =loadScript;
+
   </script> 
  
+<!-- 
+    <script
+      type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkuiyOmS0FikjETYC8UhQMt7dsVa8dV08">
+    </script>
+
+ -->
+
+  </head>
+  <body class=<%= yield(:bodyclass)%>>
+  <%= yield %> 
+
+
   </body>
 </html>
