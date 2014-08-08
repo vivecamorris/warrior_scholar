@@ -12,7 +12,7 @@
 
 <div class="subttlcontainer" id="cel">The men and women you served beside were your greatest asset in uniform, and will be your greatest asset in university and college. Now it's your turn to help.<br><br> Think about the challenges and mindsets you've learned about from curent veterans students. Prepare our troops returning to college by sharing below two concrete examples of ways they can turn each challenge into a strength to succeed as warrior-scholars.</div>
 
-<%= form_for(@user) do |f| %>
+<%= form_for(@current_user) do |f| %>
 
 	<%= f.text_area :map_comment, :class => "pure-form map-textfield", :id => "cel", :placeholder => "Share your advice for other Warrior-Scholars here." %>
 	<%= f.submit "Make Your Mark", :class => "map-submit pure-button pure-button-primary" %>

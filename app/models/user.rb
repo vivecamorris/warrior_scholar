@@ -13,6 +13,26 @@ class User < ActiveRecord::Base
     Digest::SHA1.hexdigest(token.to_s)
   end
 
+  def self.add_users_to_map(content, location)
+    @content=content
+    @location=location
+    
+    User.all.each do |user|
+      if user.map_comment != nil
+          cont = ['<div class="info_content" id="comment">' +
+            '<h3>' + user.fname + " " + user.lname + '</h3>' +
+            '<p>' + user.map_comment + '</p>' +
+            '</div>']
+          
+          newid=user.id+5
+          loc = ['', user.latitude.floor, user.longitude.floor, newid]
+
+          @location.push(loc,)
+          @content.push(cont,)
+      end
+    end
+  end
+
 
 
 private
