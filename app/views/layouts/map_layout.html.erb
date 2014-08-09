@@ -35,63 +35,29 @@
   <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.10.1.min.js"></script>
 
 
-  <script type="text/javascript">
+     <script>
+function initialize() {
+  var mapOptions = {
+    zoom: 8,
+    center: new google.maps.LatLng(-34.397, 150.644)
+  };
 
-  function initialize() {
+  var map = new google.maps.Map(document.getElementById('map-canvas'),
+      mapOptions);
+}
 
-    var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 4,
-      streetViewControl: false,
-      overviewMapControl: false,
-      mapTypeControl: false,
-      zoomControlOptions: {
-        style: google.maps.ZoomControlStyle.DEFAULT,
-      },
-      center: new google.maps.LatLng(39.82, -98.58),
-    });
+function loadScript() {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&' +
+      'callback=initialize';
+  document.body.appendChild(script);
+}
 
+window.onload = loadScript;
 
-    // Info Window Content
-    var infoWindowContent = <%= raw @content %>;
-    var locations = <%= raw @location %>;
+    </script>
 
-     // Display multiple markers on a map
-
-    var infowindow = new google.maps.InfoWindow(), marker, i;
- 
-    var marker, i;
-    var markers = new Array();
- 
-    for (i = 0; i < locations.length; i++) {  
-      marker = new google.maps.Marker({
-        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-        map: map
-      });
- 
-      markers.push(marker);
- 
-      google.maps.event.addListener(marker, 'click', (function(marker, i) {
-        return function() {
-          infowindow.setContent(infoWindowContent[i][0]);
-          infowindow.open(map, marker);
-        }
-      })(marker, i));
-    }
-
-  }
-
-
-  function loadScript() {
-    var script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&' +
-        'callback=initialize';
-    document.body.appendChild(script);
-  }
-
-  window.onload =loadScript;
-
-  </script> 
  
 <!-- 
     <script
