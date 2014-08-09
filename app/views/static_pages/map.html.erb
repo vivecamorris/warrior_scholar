@@ -1,9 +1,9 @@
  <% provide(:bodyclass, 'map') %>
  <% provide(:pbarimg, 'progressbar5.png') %>
  <% content_for :head do %>
- 	<%= render 'shared/google-maps' %> 
+ 	<%= render 'shared/googlemaps' %> 
  <% end %>
- 
+
  <div class="containerformargin">
 	<%= link_to image_tag("logogrey.png", alt: "The Warrior-Scholar Project", id: "logogrey"), '/' %> <div id="title">Warrior Scholar Project</div>
 	<%= image_tag("#{yield(:pbarimg)}", id: "progressbar", class: "hidden-800") %>
