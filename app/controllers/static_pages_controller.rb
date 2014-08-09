@@ -18,7 +18,7 @@ class StaticPagesController < ApplicationController
     #the following adds users to the map
     User.add_users_to_map(@content, @location)
 
-    render :layout => "map_layout"
+    # render :layout => "map_layout"
 
   end
 
@@ -34,7 +34,7 @@ class StaticPagesController < ApplicationController
     #the following adds users to the map
     User.add_users_to_map(@content, @location)
 
-    render :layout => "map_layout"
+    # render :layout => "map_layout"
   end
 
   def mentors
