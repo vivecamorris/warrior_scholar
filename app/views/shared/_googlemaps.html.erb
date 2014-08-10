@@ -1,59 +1,62 @@
-  <script type="text/javascript">
-
-  <%= javascript_include_tag "http://warriorscholar-assets.s3.amazonaws.com/googlemap.js" %>
-
-	  // function initialize() {
-
-	  //   var map = new google.maps.Map(document.getElementById('map'), {
-	  //     zoom: 4,
-	  //     streetViewControl: false,
-	  //     overviewMapControl: false,
-	  //     mapTypeControl: false,
-	  //     zoomControlOptions: {
-	  //       style: google.maps.ZoomControlStyle.DEFAULT,
-	  //     },
-	  //     center: new google.maps.LatLng(39.82, -98.58),
-	  //   });
+   <%= javascript_include_tag "http://warriorscholar-assets.s3.amazonaws.com/googlemap.js" %>
 
 
-	  //   // Info Window Content
-	  //   var infoWindowContent = <%= raw @content %>;
-	  //   var locations = <%= raw @location %>;
 
-	  //    // Display multiple markers on a map
+  <!-- <script type="text/javascript">
 
-	  //    var infowindow = new google.maps.InfoWindow(), marker, i;
+	  function initialize() {
+
+	    var map = new google.maps.Map(document.getElementById('map'), {
+	      zoom: 4,
+	      streetViewControl: false,
+	      overviewMapControl: false,
+	      mapTypeControl: false,
+	      zoomControlOptions: {
+	        style: google.maps.ZoomControlStyle.DEFAULT,
+	      },
+	      center: new google.maps.LatLng(39.82, -98.58),
+	    });
+
+
+	    // Info Window Content
+	    var infoWindowContent = <%= raw @content %>;
+	    var locations = <%= raw @location %>;
+
+	     // Display multiple markers on a map
+
+	     var infowindow = new google.maps.InfoWindow(), marker, i;
 	     
-	  //    var marker, i;
-	  //    var markers = new Array();
+	     var marker, i;
+	     var markers = new Array();
 	     
-	  //    for (i = 0; i < locations.length; i++) {  
-	  //     marker = new google.maps.Marker({
-	  //       position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-	  //       map: map
-	  //     });
+	     for (i = 0; i < locations.length; i++) {  
+	      marker = new google.maps.Marker({
+	        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+	        map: map
+	      });
 	      
-	  //     markers.push(marker);
+	      markers.push(marker);
 	      
-	  //     google.maps.event.addListener(marker, 'click', (function(marker, i) {
-	  //       return function() {
-	  //         infowindow.setContent(infoWindowContent[i][0]);
-	  //         infowindow.open(map, marker);
-	  //       }
-	  //     })(marker, i));
-	  //   }
+	      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+	        return function() {
+	          infowindow.setContent(infoWindowContent[i][0]);
+	          infowindow.open(map, marker);
+	        }
+	      })(marker, i));
+	    }
 
-	  // }
+	  }
 
 
-	  // function loadScript() {
-	  // 	var script = document.createElement('script');
-	  // 	script.type = 'text/javascript';
-	  // 	script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&' +
-	  // 	'callback=initialize';
-	  // 	document.body.appendChild(script);
-	  // }
+	  function loadScript() {
+	  	var script = document.createElement('script');
+	  	script.type = 'text/javascript';
+	  	script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&' +
+	  	'callback=initialize';
+	  	document.body.appendChild(script);
+	  }
 
-	  // window.onload =loadScript;
+	  window.onload =loadScript;
 
 </script> 
+ -->
