@@ -90,10 +90,10 @@ function showHide(shID) {
 
 	<%else%>
 		
-		<%=link_to "/map", data: { no_turbolink: true } do %>
-			<div id="right-btn" class="nav-btn">&gt;</div>
-		<%end%>
-
+		<a data-no-turbolink='true' href="/map">
+			<div id="right-btn" class="nav-btn"></div>
+		</a>
+		
 	<%end%>
 
 
