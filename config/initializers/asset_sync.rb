@@ -1,3 +1,4 @@
+if defined?(AssetSync)
 AssetSync.configure do |config|
   config.fog_provider = 'AWS'
   config.fog_directory = 'warriorscholar-assets'
@@ -19,4 +20,5 @@ AssetSync.configure do |config|
   #
   # Fail silently.  Useful for environments such as Heroku
   # config.fail_silently = true
+end
 end
