@@ -18,7 +18,6 @@ class StaticPagesController < ApplicationController
     #the following adds users to the map
     User.add_users_to_map(@content, @location)
 
-    render status: 308
     # render :layout => "map_layout"
 
   end
