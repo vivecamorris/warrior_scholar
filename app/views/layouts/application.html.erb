@@ -20,7 +20,8 @@
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
 
-      <%=  javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"%>
+      <%=  javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"%> 
+      <!-- may not need this: application.js already requires Jquery. -->
 
       <%= yield :head %>
 
