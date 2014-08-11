@@ -1,6 +1,6 @@
 #The Warrior-Scholar Project: Project Horizon
 
-<i> Viveca Morris ES '15, Natalia Castillejo JE '16, Phil Esterman BR '17 </i>
+<i> Phil Esterman BR '17, Viveca Morris ES '15, Natalia Castillejo JE '16 </i>
 
 On Heroku: http://warriorscholar.herokuapp.com
 
