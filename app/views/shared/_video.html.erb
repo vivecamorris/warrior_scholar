@@ -1,4 +1,12 @@
+<% content_for :head do %>
+	<%= stylesheet_link_tag "http://dnt7loa4pvqm3.cloudfront.net/bootstrap.min.css" %>
+ 	<%= javascript_include_tag "http://dnt7loa4pvqm3.cloudfront.net/bootstrap.min.js" %> 
+ <% end %>
+
 <% provide(:bodyclass, 'video') %>
+
+<% render 'shared/video_description_modal' %>
+
 <div class="header">
 
 	
