@@ -4,16 +4,27 @@
 
 <% content_for :head do %>
 <script src="http://dnt7loa4pvqm3.cloudfront.net/bootstrap.min.js"></script>
+<% end %>
+
 
 <script type="text/javascript">
- window.onload=$('#myModal').modal({
+setTimeout(function() {
+ $('#myModal').modal({
+    show: true,
+    keyboard: true,
+    backdrop: true,
+    })}, 1000);</script>
+
+
+<!-- 
+<script type="text/javascript">
+ $('#myModal').modal({
     show: true,
     keyboard: true,
     backdrop: true,
     })
-</script>
+</script> -->
 
-<% end %>
 
 
 <% provide(:bodyclass, 'video') %>

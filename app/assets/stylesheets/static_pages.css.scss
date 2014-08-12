@@ -6,7 +6,10 @@ body {
 	background-color: #424242;
 	margin: 0 auto;
 	font-family: 'Roboto', sans-serif;
-	color: #fff;
+}
+
+body.home {
+	color: white;
 }
 
 body.map {
@@ -118,33 +121,11 @@ a {
 
 /* VIDEO PAGES */
 
-/* This CSS is used for the show/hide functionality for the video descriptions. */
-
-.more {
-color: #fff;
-display: none;
-position: absolute;
-top:0;
-left:0;
+// Modal Window CSS
+h4.modal-title{
+	font-size: 1.3em;
 }
-
-a.showLink, a.hideLink {
-text-decoration: none;
-color: #C0C0C0;
-position: absolute;
-top:0;
-left:0;
-}
-
-a.showLink:hover, a.hideLink:hover {
-color: #fff;
-}
-
-.video-description-wrapper {
-position: relative;
-}
-
- /* End of the CSS used for the show/hide functionality */
+// end Modal Window
 
 .outer {
 	width: 100%;
