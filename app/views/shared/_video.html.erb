@@ -1,7 +1,20 @@
+<% content_for :tophead do %>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<% end %>
+
 <% content_for :head do %>
-	<%= stylesheet_link_tag "http://dnt7loa4pvqm3.cloudfront.net/bootstrap.min.css" %>
- 	<%= javascript_include_tag "http://dnt7loa4pvqm3.cloudfront.net/bootstrap.min.js" %> 
- <% end %>
+<script src="http://dnt7loa4pvqm3.cloudfront.net/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+ window.onload=$('#myModal').modal({
+    show: true,
+    keyboard: true,
+    backdrop: true,
+    })
+</script>
+
+<% end %>
+
 
 <% provide(:bodyclass, 'video') %>
 
