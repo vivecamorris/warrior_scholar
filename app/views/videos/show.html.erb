@@ -1,7 +1,81 @@
+<% content_for :tophead do %>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<% end %>
+
+<% content_for :head do %>
+	<script src="http://dnt7loa4pvqm3.cloudfront.net/bootstrap.min.js"></script>
+<% end %>
+
  <% provide(:pbarimg, @video.pbarimg) %>
  <% provide(:videolink, @video.videolink) %>
  <%provide(:vidnum, @video.vidnum)%>
  <% provide(:ttl, @video.ttl) %>
  <% provide(:subttl, @video.subttl) %>
  <% provide(:videodescription, @video.videodescription) %>
- <%= render 'shared/video' %>
+ <% provide(:bodyclass, 'video') %>
+
+<!-- Modal Window -->
+<script type="text/javascript">
+	setTimeout(function() {
+	 $('#myModal').modal({
+	    show: true,
+	    keyboard: true,
+	    backdrop: true,
+	    })}, 1000);
+</script>
+
+<%= render 'shared/video_description_modal' %>
+<!-- End Modal Window -->
+
+<div class="header">
+
+	<%= link_to image_tag("logogrey.png", alt: "The Warrior-Scholar Project", id: "logogrey"), '/' %> 
+	<a href="/"> 
+		<div id="title">Warrior Scholar Project
+		</div>
+	</a>
+	<%= image_tag("#{yield(:pbarimg)}", id: "progressbar") %>
+
+</div>
+
+<div class="containerformargin">
+
+	<div class = "outer">
+		<div class = "content">
+			<div class="js-video vimeo widescreen inner">
+				<iframe id="video" src="<%= yield(:videolink)%>" frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen>
+				</iframe>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<div class="topfooter">
+
+
+
+		<%=link_to @prev_vid do %>
+			<div id="left-btn" class="nav-btn">&lt;</div>
+		<%end%>
+
+
+
+
+	<div class="vid-ttl">
+
+		<div id="vid-btn"><%=yield(:vidnum)%> of 5</div>
+		<span class="text-ttl">
+		<span id="ttl"><%=yield(:ttl)%></span> 
+		<div id="subttl"><%=yield(:subttl)%></div>
+		</span>
+
+	</div>
+
+
+		<%=link_to @next_vid, data: { no_turbolink: @data_no_turbolinks_attribute } do %>
+			<div id="right-btn" class="nav-btn">&gt;</div>
+		<%end%>
+
+
+</div>
