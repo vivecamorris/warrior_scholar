@@ -5,7 +5,7 @@ class VideosController < ApplicationController
 		@video = Video.find(params[:id])
 
 		@prev_vid = Video.prev_vid(@video)
-		@next_vid, @data_no_turbolinks_attribute = Video.next_vid(@video)
+		@next_vid = Video.next_vid(@video)
 
 	end
 

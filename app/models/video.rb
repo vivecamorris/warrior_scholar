@@ -19,13 +19,11 @@ class Video < ActiveRecord::Base
 
 			if video.id < 5
 				next_vid = Video.find(video.id + 1)
-				data_no_turbolinks_attribute = false
 			else
 				next_vid = "/map"
-				data_no_turbolinks_attribute = true
 			end
 
-			return next_vid, data_no_turbolinks_attribute
+			return next_vid
 
 	end
 

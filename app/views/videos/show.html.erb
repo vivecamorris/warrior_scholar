@@ -72,10 +72,18 @@
 
 	</div>
 
-
-		<%=link_to @next_vid, data: { no_turbolink: @data_no_turbolinks_attribute } do %>
+	<% if @video.id < 5 %>
+		
+		<%=link_to @next_vid do %>
 			<div id="right-btn" class="nav-btn">&gt;</div>
 		<%end%>
 
+	<% else %>
+
+		<%=link_to @next_vid, data: { no_turbolink: true } do %>
+			<div id="right-btn" class="nav-btn">&gt;</div>
+		<%end%>
+
+	<%end%>
 
 </div>
